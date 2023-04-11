@@ -1,0 +1,122 @@
+﻿﻿
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Сайт</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+ 
+</head>
+<body style="margin:0;">
+  
+    <div id="wrap">
+       
+
+    </div>
+    
+    <main>
+
+        
+        <h3>Форма</h3>
+
+        <form action="/"
+              method="POST"
+              id="mainForm">
+
+            <label>
+                Имя:<br />
+                <input name="field-name-1"
+                       placeholder="Ведите ваше имя" />
+            </label><br />
+            <br />
+            <label>
+                Email:<br />
+                <input name="field-email"
+                       type="email"
+                       placeholder="Введите вашу почту" />
+            </label><br />
+            <br />
+            <label>
+                Дата рождения:<br />
+                <input name="field-date"
+                       value="2022-09-10"
+                       type="date" />
+            </label><br />
+
+            <br />
+            Укажите ваш пол:<br />
+            <label>
+                <input type="radio" checked="checked"
+                       name="radio-group-1" value="Значение1" />
+                Мужской
+            </label>
+            <label>
+                <input type="radio"
+                       name="radio-group-1" value="Значение2" />
+                Женский
+            </label><br />
+            <br />
+
+            <label>
+                Укажите количество ваших конечностей:<br />
+                <label>
+                    <input type="radio" checked="checked"
+                           name="radio-group-2" value="Значение1" />
+                    0
+                </label>
+                <label>
+                    <input type="radio" checked="checked"
+                           name="radio-group-2" value="Значение1" />
+                    1-4
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="radio-group-2" value="Значение2" />
+                    5-6
+                </label>
+                <label>
+                    <input type="radio"
+                           name="radio-group-2" value="Значение2" />
+                    7-12
+                </label>
+                <label>
+                    <input type="radio"
+                           name="radio-group-2" value="Значение2" />
+                    13 и более
+                </label><br />
+            </label><br />
+            <label>
+                Укажите ваши сверхспособности:
+                <br />
+                <select name="field-name-4[]"
+                        multiple="multiple">
+                    <option value="Значение1">Бессмертие</option>
+                    <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
+                    <option value="Значение3" selected="selected">Левитация</option>
+                </select>
+            </label><br />
+            <label>
+                <br />
+                Биография:<br />
+                <textarea name="field-name-2">Расскажите что нибудь о себе (не обязательно)</textarea>
+            </label><br />
+
+
+
+            <br />
+            <label>
+                <input type="checkbox" checked="checked"
+                       name="check-1" />
+                С контрактом ознакомлен(а)
+            </label><br />
+            <input type="submit" value="Отправить" />
+        </form>
+        <h4>
+        </h4>
+    </main>
+   
+</body>
+</html>
