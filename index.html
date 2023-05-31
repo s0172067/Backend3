@@ -1,122 +1,94 @@
-﻿﻿
-<!DOCTYPE html>
-<html lang="ru-RU">
+﻿<!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Сайт</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
- 
+    <meta charset="utf-8" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
-<body style="margin:0;">
-  
-    <div id="wrap">
-       
 
-    </div>
-    
-    <main>
+<body>
+    <div class="main">
+        <h1>Форма</h1>
 
-        
-        <h3>Форма</h3>
+        <form action="index.php" method="POST">
+            <p>
+                Имя:
+                <input name="name" placeholder="Введите имя" />
+            </p>
 
-        <form action="/"
-              method="POST"
-              id="mainForm">
+            <p>
+                E-mail:
+                <input name="email" type="email" placeholder="Введите почту">
+            </p>
 
-            <label>
-                Имя:<br />
-                <input name="field-name-1"
-                       placeholder="Ведите ваше имя" />
-            </label><br />
-            <br />
-            <label>
-                Email:<br />
-                <input name="field-email"
-                       type="email"
-                       placeholder="Введите вашу почту" />
-            </label><br />
-            <br />
-            <label>
-                Дата рождения:<br />
-                <input name="field-date"
-                       value="2022-09-10"
-                       type="date" />
-            </label><br />
+            <p>
+                Год рождения:
+                <select id="yearB" name="year"></select>
+            </p>
 
-            <br />
-            Укажите ваш пол:<br />
-            <label>
-                <input type="radio" checked="checked"
-                       name="radio-group-1" value="Значение1" />
+            <p>
+                Пол:
+                <input type="radio" name="radio-1" checked="checked" value="male" />
                 Мужской
-            </label>
-            <label>
-                <input type="radio"
-                       name="radio-group-1" value="Значение2" />
+                <input type="radio" name="radio-1" value="female" />
                 Женский
-            </label><br />
-            <br />
+            </p>
 
-            <label>
-                Укажите количество ваших конечностей:<br />
-                <label>
-                    <input type="radio" checked="checked"
-                           name="radio-group-2" value="Значение1" />
-                    0
-                </label>
-                <label>
-                    <input type="radio" checked="checked"
-                           name="radio-group-2" value="Значение1" />
-                    1-4
-                </label>
+            <p>
+                Сколько конечностей? <br>
 
-                <label>
-                    <input type="radio"
-                           name="radio-group-2" value="Значение2" />
-                    5-6
-                </label>
-                <label>
-                    <input type="radio"
-                           name="radio-group-2" value="Значение2" />
-                    7-12
-                </label>
-                <label>
-                    <input type="radio"
-                           name="radio-group-2" value="Значение2" />
-                    13 и более
-                </label><br />
-            </label><br />
-            <label>
-                Укажите ваши сверхспособности:
-                <br />
-                <select name="field-name-4[]"
-                        multiple="multiple">
-                    <option value="Значение1">Бессмертие</option>
-                    <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
-                    <option value="Значение3" selected="selected">Левитация</option>
+                <input type="radio" name="radio-2" checked="checked" value="4" />
+                4
+
+                <input type="radio" name="radio-2" value="3" />
+                3
+
+                <input type="radio" name="radio-2" value="2" />
+                2
+
+                <input type="radio" name="radio-2" value="1" />
+                1
+
+                <input type="radio" name="radio-2" value="0" />
+                0
+
+            </p>
+
+            <p>
+                Сверхспособности?
+
+                <select name="super" multiple="multiple">
+                    <option value="inv" selected="selected">Бессмертие</option>
+                    <option value="walk">прохождение сквозь стены</option>
+                    <option value="fly">левитация</option>
                 </select>
-            </label><br />
-            <label>
-                <br />
-                Биография:<br />
-                <textarea name="field-name-2">Расскажите что нибудь о себе (не обязательно)</textarea>
-            </label><br />
 
+            </p>
 
+            <p>
+                Биография?
+                <textarea name="bio"></textarea>
+            </p>
 
-            <br />
-            <label>
-                <input type="checkbox" checked="checked"
-                       name="check-1" />
-                С контрактом ознакомлен(а)
-            </label><br />
-            <input type="submit" value="Отправить" />
+            <p>
+                <input type="checkbox" name="check1" /> С контактом ознакомлен(а)
+            </p>
+
+            <p>
+                Отправка формы:
+                <input type="submit" value="Отправить" />
+            </p>
         </form>
-        <h4>
-        </h4>
-    </main>
-   
+    </div>
+    <script type="text/javascript">
+        window.onload = function () {
+            var yearB = document.getElementById("yearB");
+            var currentYear = (new Date()).getFullYear();
+            for (var i = 1950; i <= currentYear; i++) {
+                var option = document.createElement("OPTION");
+                option.innerHTML = i;
+                option.value = i;
+                yearB.appendChild(option);
+            }
+        };
+    </script>
 </body>
-</html>
